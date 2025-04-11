@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Keren</title>
+</head>
+<body>
+    <header align="center">
+        <h1>Profil Saya</h1>
+    </header>
+
+    <nav align="center">
+        <a href="#bio">Biodata</a> |
+        <a href="#multimedia">Multimedia</a> |
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <main>
+        <article id="bio" align="center">
+            <img src="WhatsApp Image 2025-03-22 at 03.42.57.jpeg" alt="Foto Profil" width="150" height="150">
+            <h2>Imanuel Fernando</h2>
+            <p>Editor | Vlogger | Content Creator | Gamers</p>
+            <p>Saya adalah seorang profesional di bidang teknologi dengan ketertarikan dalam desain web dan pengembangan aplikasi.</p>
+
+            <p>
+                <button onclick="lihatBiodata()">Lihat Biodata</button>
+                <button onclick="lihatKontak()">Kontak Informasi</button>
+                <button onclick="window.open('snack video.html', '_blank')">Snack Video</button>
+                <button onclick="window.open('facebook.html', '_blank')">Facebook</button>
+                <button onclick="window.open('twitter.html', '_blank')">Twitter</button>
+            </p>
+
+            <h3>Tabel Biodata</h3>
+            <table border="1" cellpadding="8" cellspacing="0" align="center">
+                <tr>
+                    <th>Nama</th>
+                    <td>Imanuel Fernando</td>
+                </tr>
+                <tr>
+                    <th>Profesi</th>
+                    <td>Editor, Vlogger, Content Creator, Gamers</td>
+                </tr>
+                <tr>
+                    <th>Hobi</th>
+                    <td>Desain Web, Gaming, Editing Video</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>nama@email.com</td>
+                </tr>
+                <tr>
+                    <th>Domisili</th>
+                    <td>Indonesia</td>
+                </tr>
+            </table>
+        </article>
+
+        <section id="multimedia" align="center">
+            <h3>Video dan Audio</h3>
+            <video controls width="320">
+                <source src="video.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+            <br>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung tag audio.
+            </audio>
+        </section>
+    </main>
+
+    <aside align="center">
+        <h3>Informasi Tambahan</h3>
+        <p>Ini adalah konten tambahan.</p>
+    </aside>
+
+    <footer align="center">
+        <h3>Formulir Data Diri</h3>
+        <form id="kontak" onsubmit="return submitForm(event)">
+            <p>
+                <label for="nama">Nama Lengkap:</label><br>
+                <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap">
+            </p>
+            <p>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required placeholder="Masukkan email aktif">
+            </p>
+            <p>
+                <label for="tgl">Tanggal Lahir:</label><br>
+                <input type="date" id="tgl" name="tgl" required>
+            </p>
+            <p>
+                <label for="gender">Jenis Kelamin:</label><br>
+                <select id="gender" name="gender">
+                    <option value="laki-laki">Laki-laki</option>
+                    <option value="perempuan">Perempuan</option>
+                    <option value="lainnya">Lainnya</option>
+                </select>
+            </p>
+            <p>
+                <label for="bio">Biografi Singkat:</label><br>
+                <textarea id="bio" name="bio" required placeholder="Tulis sedikit tentang diri Anda"></textarea>
+            </p>
+            <p>
+                <button type="submit">Kirim</button>
+            </p>
+        </form>
+        <p id="status"></p>
+    </footer>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            document.getElementById('status').innerText = "Formulir berhasil dikirim!";
+        }
+
+        function lihatBiodata() {
+            window.open('biodata.html', '_blank');
+        }
+
+        function lihatKontak() {
+            window.open('jumlah folloer instagram.html', '_blank');
+        }
+    </script>
+</body>
+</html>
